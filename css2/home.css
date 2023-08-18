@@ -1,0 +1,81 @@
+.container__home{
+    position: relative;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+.article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+.article__image{
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    animation: upDown 1.2s ease-in-out;
+}
+.article__image>img{
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+.article__hello > p,
+.article__name > p,
+.article__title,
+.article__description {
+  opacity: 0;
+  animation: opacityAnimation 1s ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.article__hello>p{
+    font-size: 1.5rem;
+    padding: 10px 0 0 0;
+    margin: 0;
+    }
+    .article__name>p{
+        padding: 0;
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--text-white);
+    }
+    .article__title>p{
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--text-white);
+        padding: 0;
+        margin: 0;
+    
+     white-space: nowrap;
+      overflow: hidden;
+      animation: typing 6s steps(40, end) infinite, blink-caret 0.5s step-end infinite;
+      border-right: 2px solid var(--text-gold); /* Atur style cursor di sini */
+    }
+    
+    .article__description{
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--text-white);
+    }
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+}
+/*  */
+@media screen and (max-width: 767.98px) {
+ .container__home{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+ }   
+}

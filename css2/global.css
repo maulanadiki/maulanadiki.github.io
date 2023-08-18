@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+	font-family: "Poppins", sans-serif;
+	scroll-behavior: smooth;
+}
+:root {
+	--text-gold: #ffd100;
+	--text-white: #f3f3f3;
+	--text-grey: #6d6d6d;
+	--text-bg-grey: #404040;
+
+	--font-medium: 1.2rem;
+    --font-large:1.5rem;
+}
+ul,
+li,
+ol,
+a,h1,h2,h3,h4,h5,h6 {
+	text-decoration: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #202020;
+	color: var(--text-gold);
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+
+@keyframes upDown{
+    0%{
+        transform: translateY(-100%);
+    }
+    60%{
+        transform: translateY(0%);
+    }
+    80%{
+        transform: translateY(-30px);
+    }
+    90%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform:translateY(-5px);
+    }
+    
+}
+
+
+@keyframes opacityAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Tambahan untuk kompatibilitas lintas browser */
+  @-webkit-keyframes opacityAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-moz-keyframes opacityAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes typing{
+    0%, 100% { width: 0; }
+  20%, 90% { width: 330px; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--text-gold); } /* Warna cursor saat 'nyala' */
+  }
