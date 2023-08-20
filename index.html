@@ -30,22 +30,22 @@
 			<!-- navbar website -->
 			<nav class="navbar__website" id="navbarContent">
 				<ul class="navbar__main">
-					<li class="navbar__list">
+					<li class="navbar__list activedlist" id="mobhome">
 						<a href="#" class="navbar__list__link">
 							<i class="bx bx-home-alt-2"></i>&nbsp; HOME
 						</a>
 					</li>
-					<li class="navbar__list">
+					<li class="navbar__list" id="mobabout">
 						<a href="#" class="navbar__list__link"
 							><i class="bx bxs-id-card"></i> &nbsp; ABOUT</a
 						>
 					</li>
-					<li class="navbar__list">
+					<li class="navbar__list" id="mobexperience">
 						<a href="#" class="navbar__list__link"
 							><i class="bx bx-briefcase"></i> &nbsp; EXPERIENCE</a
 						>
 					</li>
-					<li class="navbar__list">
+					<li class="navbar__list" id="mobportfolio">
 						<a href="#" class="navbar__list__link"
 							><i class="bx bxs-bookmarks"></i>&nbsp; PORTFOLIO</a
 						>
@@ -73,22 +73,22 @@
 			<nav class="navbar__about">
 				<p class="navbar__sticky__name">DIKI MAULANA</p>
 				<ul class="navbar__sticky__container">
-					<li class="list__sticky">
+					<li class="list__sticky actived" id="navhome">
 						<a href="#" class="navbar__sticky__list"
 							><i class="bx bx-home-alt-2"></i>&nbsp; HOME</a
 						>
 					</li>
-					<li class="list__sticky actived">
+					<li class="list__sticky" id="navabout">
 						<a href="#" class="navbar__sticky__list"
 							><i class="bx bxs-id-card"></i> &nbsp; ABOUT</a
 						>
 					</li>
-					<li class="list__sticky">
+					<li class="list__sticky" id="navexperience">
 						<a href="#" class="navbar__sticky__list"
 							><i class="bx bx-briefcase"></i> &nbsp; EXPERIENCE</a
 						>
 					</li>
-					<li class="list__sticky">
+					<li class="list__sticky" id="navportfolio">
 						<a href="#" class="navbar__sticky__list"
 							><i class="bx bxs-bookmarks"></i>&nbsp; PORTFOLIO</a
 						>
@@ -97,7 +97,7 @@
 			</nav>
 
 			<!-- this about -->
-			<div class="about__container">
+			<div class="about__container" id="about">
 				<div class="about__content">
 					<div class="content__image">
 						<img src="asset/diki.png" alt="Diki Maulana" class="about__img" />
@@ -243,54 +243,101 @@
 				</div>
 			</div>
 
-			<div class="experience__container">
+			<div class="experience__container" id="experience">
 				<div class="experience__title">EXPERIENCE</div>
 				<div class="experience__description">ini deskripsinya</div>
 
 				<div class="experience__card">
-					<div class="card__container">
-						<div class="card__image">
-							<img src="asset/lalumiere.png" alt="Pengalaman" />
-						</div>
-						<div class="card__body">
-							<h3 class="card__title">La Lumiere Aesthetics</h3>
-							<h4 class="card__job">Web Programmer</h4>
-							<h5 class="card__time">Nov 2022 - Mei 2023</h5>
-							<div class="card__descriptions">ini descirptionnya
-								
+					<div class="card__wrapper">
+						<div class="card__container">
+							<div class="card__image">
+								<img src="asset/lalumiere.png" alt="Pengalaman" />
+							</div>
+							<div class="card__body">
+								<h3 class="card__title">La Lumiere Aesthetics</h3>
+								<h4 class="card__job">Web Programmer</h4>
+								<h5 class="card__time">Nov 2022 - Mei 2023</h5>
+								<div class="card__descriptions">
+									Description
+									<h6>Berkontribusi dalam membangun sebuah sistem POS serta membuat
+										sebuah landing page perusahaan dengan menggunakan framework Laravel
+										dan Bootstraps.</h6>
+								</div>
 							</div>
 						</div>
-					</div>
-					<!-- oppo -->
-					<div class="card__container">
-						<div class="card__image">
-							<img src="asset/oppo2.png" alt="Pengalaman" />
+						<!-- oppo -->
+						<div class="card__container">
+							<div class="card__image">
+								<img src="asset/oppo2.png" alt="Pengalaman" />
+							</div>
+							<div class="card__body">
+								<h3 class="card__title">
+									PT. World Innovative Telecommunication
+								</h3>
+								<h4 class="card__job">SPV BRANDING</h4>
+								<h6 class="card__time">Nov 2022 - Mei 2023</h6>
+								<div class="card__descriptions">
+									Description
+									<h6>
+										mengadakan alat peraga promosi untuk membantu meningkatkan
+										penjualan, mencatat segala pengeluaran dan masuk alat peraga
+										promosi untuk diberikan kepada setiap rekanan bisnis yang
+										bekerja sama Menjalin kerja sama dengan kontraktor sebagai
+										pihak ke tiga guna untuk memenuhi pembuatan media
+										promosi,membuat laporan budgeting periklanan, memberikan
+										arahan kepada team dalam menjalankan tugas dan kewajiban.
+									</h6>
+								</div>
+							</div>
 						</div>
-						<div class="card__body">
-							<h3 class="card__title">PT. World Innovative Telecommunication</h3>
-							<h4 class="card__job">SPV BRANDING</h4>
-							<h6 class="card__time">Nov 2022 - Mei 2023</h6>
-							<div class="card__descriptions">ini descirptionnya</div>
+						<!-- dbp -->
+						<div class="card__container">
+							<div class="card__image">
+								<img src="asset/dbp2.png" alt="Pengalaman" />
+							</div>
+							<div class="card__body">
+								<h3 class="card__title">PT. Dwitunggal Bangun Persada</h3>
+								<h4 class="card__job">Web Programmer</h4>
+								<h6 class="card__time">Nov 2022 - Mei 2023</h6>
+								<div class="card__descriptions">
+									Description
+									<h6>
+										Membuat laporan kehadiran karyawan serta penggajian
+										karyawan, mencatat segala material yang digunakan dalam
+										proses produksi, mengelola keanggotaan BPJS karyawan.
+									</h6>
+								</div>
+							</div>
 						</div>
-					</div>
-					<!-- dbp -->
-					<div class="card__container">
-						<div class="card__image">
-							<img src="asset/dbp2.png" alt="Pengalaman" />
-						</div>
-						<div class="card__body">
-							<h3 class="card__title">PT. Dwitunggal Bangun Persada</h3>
-							<h4 class="card__job">Web Programmer</h4>
-							<h6 class="card__time">Nov 2022 - Mei 2023</h6>
-							<div class="card__descriptions">ini descirptionnya</div>
+						<!-- ace hardware -->
+						<div class="card__container">
+							<div class="card__image">
+								<img src="asset/ace.png" alt="Pengalaman" />
+							</div>
+							<div class="card__body">
+								<h3 class="card__title">PT. ACE HARDWARE INDONESIA</h3>
+								<h4 class="card__job">SALES</h4>
+								<h6 class="card__time">MEI 2014 - FEB 2016</h6>
+								<div class="card__descriptions">
+									Description
+									<h6>
+										Memberikan solusi atas permasalahan pelanggan, menjual
+										produk, memonitoring ketersediaan barang penjualan, menjaga
+										kerapihan serta kebersihan produk dan membuat laporan
+										penjualan.
+									</h6>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="portfolio__container">
+			<!-- ada masalah di experiencenya coba cek lagi -->
+			<div class="portfolio__container" id="portfolio">
 				<div class="experience__title">PORTFOLIO</div>
-				<div class="experience__description">PAST PROJECT EXPERIENCE, EXPLORE THE PROHECT I'VE WORKED ON SO FAR</div>
+				<div class="experience__description">
+					PAST PROJECT EXPERIENCE, EXPLORE THE PROHECT I'VE WORKED ON SO FAR
+				</div>
 			</div>
 		</div>
 

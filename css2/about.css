@@ -45,8 +45,16 @@
     color: var(--text-gold);
     margin-top: 20px;
 }
-.actived{
-    border-bottom: 2px solid var(--text-gold);
+.actived::after{
+    /* border-bottom: 2px solid var(--text-gold); */
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    display: block;
+    margin-left: 75px;
+    background-color: var(--text-gold);
+
 }
 .actived >a {
     color: var(--text-white);
@@ -212,28 +220,7 @@ font-weight: 600;
     font-size:12px ;
     color: var(--text-gold);
 }
-.tech__list:hover > .items__github::after,
-.tech__list:hover > .items__mysql::after,
-.tech__list:hover > .items__html::after,
-.tech__list:hover > .items__css::after,
-.tech__list:hover > .items__php::after,
-.tech__list:hover > .items__js::after,
-.tech__list:hover > .items__boot::after,
-.tech__list:hover > .items__laravel::after{
-    content: "Advance";
-    margin-top: 1px;
-}
 
-.tech__list:hover>.items__tail::after,
-.tech__list:hover>.items__react::after,
-.tech__list:hover>.items__next::after,
-.tech__list:hover>.items__git::after,
-.tech__list:hover>.items__npm::after
-{
-    content: "Basic";
-    margin-top: 1px;
-    
-}
 
 
 
@@ -290,9 +277,54 @@ font-weight: 600;
 
 
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+    .tech__list:hover > .items__github::after,
+.tech__list:hover > .items__mysql::after,
+.tech__list:hover > .items__html::after,
+.tech__list:hover > .items__css::after,
+.tech__list:hover > .items__php::after,
+.tech__list:hover > .items__js::after,
+.tech__list:hover > .items__boot::after,
+.tech__list:hover > .items__laravel::after{
+    content: "Advance";
+    margin-top: 1px;
+}
+
+.tech__list:hover>.items__tail::after,
+.tech__list:hover>.items__react::after,
+.tech__list:hover>.items__next::after,
+.tech__list:hover>.items__git::after,
+.tech__list:hover>.items__npm::after
+{
+    content: "Basic";
+    margin-top: 1px;
+    
+}
+}
 
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
+    .tech__list:hover > .items__github::after,
+.tech__list:hover > .items__mysql::after,
+.tech__list:hover > .items__html::after,
+.tech__list:hover > .items__css::after,
+.tech__list:hover > .items__php::after,
+.tech__list:hover > .items__js::after,
+.tech__list:hover > .items__boot::after,
+.tech__list:hover > .items__laravel::after{
+    content: "Advance";
+    margin-top: 1px;
+}
+
+.tech__list:hover>.items__tail::after,
+.tech__list:hover>.items__react::after,
+.tech__list:hover>.items__next::after,
+.tech__list:hover>.items__git::after,
+.tech__list:hover>.items__npm::after
+{
+    content: "Basic";
+    margin-top: 1px;
+    
+}
 }
 @media screen and (max-width: 767.98px){
     .navbar__about{
@@ -365,10 +397,14 @@ font-weight: 600;
     }
 
     .counter {
-        font-size: 12px;
+        font-size: 1.2rem;
       }
       
       .count {
         width: 20px;
+      }
+
+      .items__react{
+        font-size: 0.875rem;
       }
 }

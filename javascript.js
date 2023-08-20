@@ -4,20 +4,93 @@ function toggleMenu() {
 	console.log("berhasil");
 }
 
-document.addEventListener("scroll", function () {
-	const element = document.getElementById("home");
-	const navWeb = document.getElementById("navbarContent");
+const navhome = document.getElementById("navhome");
+const navabout = document.getElementById("navabout");
+const navexperience = document.getElementById("navexperience");
+const navportfolio = document.getElementById("navportfolio");
 
+const mobhome = document.getElementById("mobhome");
+const mobabout = document.getElementById("mobabout");
+const mobexperience = document.getElementById("mobexperience");
+const mobportfolio = document.getElementById("mobportfolio");
+
+
+
+window.addEventListener("scroll",()=>{
 	const scrollPosition = window.scrollY;
-	// if (scrollPosition > 0) {
-	// 	const opacity = 1 - scrollPosition / 500;
-	// 	element.style.opacity = opacity;
-	// 	navWeb.style.opacity = opacity;
-	// 	console.log(opacity);
-	// } else {
-	// 	element.style.opacity = 1;
-	// 	mobile.style.opacity = 1;
-	// }
+
+	// Tentukan posisi scroll berdasarkan elemen target
+	const homePosition = document.getElementById("home").offsetTop;
+	const aboutPosition = document.getElementById("about").offsetTop;
+	const experiencePosition = document.getElementById("experience").offsetTop;
+	const portfolioPosition = document.getElementById("portfolio").offsetTop;
+
+	// Hapus kelas "active" dari semua elemen
+	mobhome.classList.remove("activedlist");
+	mobabout.classList.remove("activedlist");
+	mobexperience.classList.remove("activedlist");
+	mobportfolio.classList.remove("activedlist");
+
+
+	switch (true) {
+		case scrollPosition >= homePosition && scrollPosition < aboutPosition:
+			mobhome.classList.add("activedlist");
+			break;
+		case scrollPosition >= aboutPosition && scrollPosition < experiencePosition:
+			mobabout.classList.add("activedlist");
+			break;
+		case scrollPosition >= experiencePosition &&
+			scrollPosition < portfolioPosition:
+			mobexperience.classList.add("activedlist");
+			break;
+		case scrollPosition >= portfolioPosition:
+			mobportfolio.classList.add("activedlist");
+			break;
+		default:
+			// Jika tidak ada elemen yang sesuai, tidak perlu menambahkan kelas "active"
+			break;
+	}
+});
+
+
+
+
+
+// navbar dari bentukan web
+ window.addEventListener("scroll", () => {
+	const scrollPosition = window.scrollY;
+
+	// Tentukan posisi scroll berdasarkan elemen target
+	const homePosition = document.getElementById("home").offsetTop;
+	const aboutPosition = document.getElementById("about").offsetTop;
+	const experiencePosition = document.getElementById("experience").offsetTop;
+	const portfolioPosition = document.getElementById("portfolio").offsetTop;
+
+	// Hapus kelas "active" dari semua elemen
+	navhome.classList.remove("actived");
+	navabout.classList.remove("actived");
+	navexperience.classList.remove("actived");
+	navportfolio.classList.remove("actived");
+
+	// Tentukan elemen yang sesuai dengan posisi scroll menggunakan switch case
+	switch (true) {
+		case scrollPosition >= homePosition && scrollPosition < aboutPosition:
+			navhome.classList.add("actived");
+			break;
+		case scrollPosition >= aboutPosition && scrollPosition < experiencePosition:
+			navabout.classList.add("actived");
+			break;
+		case scrollPosition >= experiencePosition &&
+			scrollPosition < portfolioPosition:
+			navexperience.classList.add("actived");
+			break;
+		case scrollPosition >= portfolioPosition:
+			navportfolio.classList.add("actived");
+			break;
+		default:
+			// Jika tidak ada elemen yang sesuai, tidak perlu menambahkan kelas "active"
+			break;
+	}
 });
 
 const skills = document.querySelectorAll(".skills__list");
@@ -39,22 +112,6 @@ skills.forEach((tombol) => {
 });
 // skills[0].click();
 
-// function motionScroll(){
-// 	const skillContents = document.querySelectorAll(".reveal");
-// 	for(let i = 0; i<skillContents.length; i++){
-// 		const windowsHeight = window.innerHeight;
-// 		const elemenTop = skillContents[i].getBoundingClientRect().top;
-// 		const elemenVisible =150;
-
-// 		if(elemenTop < windowsHeight - elemenVisible){
-// 			skillContents[i].classList.add("active");
-// 		}else{
-// 			skillContents[i].classList.remove("active");
-// 		}
-// 	}
-// }
-// window.addEventListener("scroll", motionScroll);
-
 // counter
 const value = [
 	{ id: "html", value: 90 },
@@ -73,23 +130,17 @@ const value = [
 const counters = document.querySelectorAll(".tech__list");
 counters.forEach((counter) => {
 	counter.addEventListener("mouseenter", () => {
-		value.forEach(val=>{
+		value.forEach((val) => {
 			const element = counter.querySelector(`#${val.id}`);
 			let startValue = 0;
 
-			const interval = setInterval(()=>{
+			const interval = setInterval(() => {
 				startValue++;
 				element.innerHTML = startValue + "%";
-				if(startValue == val.value){
+				if (startValue == val.value) {
 					clearInterval(interval);
 				}
-
-			},val.value*20/100);
+			}, (val.value * 20) / 100);
 		});
 	});
 });
-
-
-  
-  
-  
