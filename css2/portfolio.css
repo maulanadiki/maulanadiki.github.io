@@ -1,6 +1,64 @@
-.portfolio__container{
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    padding: 20px 0;
+.portfolio__container {
+	width: 100%;
+	height: 95vh;
+	text-align: center;
+	padding: 20px 0;
 }
+
+.portfolio__card {
+	width: 100%;
+	height: 500px;
+	position: relative;
+    display: flex;
+    flex-direction: row;
+	overflow: auto;
+	margin: 30px 0;
+}
+
+.port__card__container {
+	width: 300px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	border-radius: 12px;
+	position: relative;
+	/* border: 2px solid var(--text-gold); */
+	padding: 15px;
+	margin: 0 30px;
+	background-color: rgba(200, 200, 200, 0.3);
+}
+.card__port__title > h4 {
+	font-family: 200;
+}
+
+.card__port__image {
+	width: 100%;
+	height: 200px;
+	background-color: var(--text-white);
+	border-radius: 24px;
+	margin: 15px 0;
+}
+.port__descript {
+	text-align: start;
+	color: var(--text-white);
+}
+.btn-see {
+	position: absolute;
+	display: inline-block;
+	bottom: 30px;
+	background-color: rgba(25, 25, 25, 0) !important;
+	border: 2px solid var(--text-gold);
+	color: var(--text-white);
+	margin-left: -75px;
+	width: 120px;
+	height: 30px;
+	border-radius: 14px;
+	transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-see:hover {
+    background-color: #2980b9;
+}
+
