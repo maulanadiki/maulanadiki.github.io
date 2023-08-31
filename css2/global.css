@@ -29,6 +29,8 @@ body {
 	overflow: auto;
 }
 
+
+
 @keyframes upDown{
     0%{
         transform: translateY(-100%);
@@ -86,3 +88,14 @@ body {
     from, to { border-color: transparent; }
     50% { border-color: var(--text-gold); } /* Warna cursor saat 'nyala' */
   }
+
+
+/* modal */
+.modal__container{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(25, 25, 25, 0.7);
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+}

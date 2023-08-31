@@ -52,6 +52,12 @@ window.addEventListener("scroll",()=>{
 	}
 });
 
+// const seeDetail = document.querySelector(".btn-see");
+// const cardDetail = document.getElementById("cardDetail");
+// seeDetail.addEventListener("click", () => {
+// 	cardDetail.classList.add("active");
+// });
+
 
 
 

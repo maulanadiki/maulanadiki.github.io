@@ -1,64 +1,156 @@
-.portfolio__container {
-	width: 100%;
-	height: 95vh;
-	text-align: center;
-	padding: 20px 0;
-}
-
-.portfolio__card {
-	width: 100%;
-	height: 500px;
+.portfolio__container{
 	position: relative;
-    display: flex;
-    flex-direction: row;
-	overflow: auto;
-	margin: 30px 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	text-align: center;
 }
 
-.port__card__container {
-	width: 300px;
-	height: 400px;
+/* bagian card */
+.portfolio__card{
+	width: 100vw;
+	height: 80vh;
+	display: flex;
+	flex-direction: row;
+	/* background-color: red; */
+	position: relative;
+	place-content: center;
+	margin-top: 20px;
+	/* place-items: center; */
+}
+
+.portfolio__containers{
+	display: flex;
+	flex-direction: row;
+	max-width: 90vw;
+	overflow: auto;
+	gap: 20px;
+	max-height: 75vh;
+}
+.portfolio__containers::-webkit-scrollbar{
+	width: 50px; 
+	height: 5px;
+}
+.portfolio__containers::-webkit-scrollbar-thumb {
+	background-color: var(--text-gold); /* Warna latar belakang thumb */
+	border-radius: 10px; /* Sudut radius thumb */
+  }
+.portfolio__containers::-webkit-scrollbar-track {
+	background-color: var(--text-bg-grey); /* Warna latar belakang track */
+  }
+
+.portfolio__container__card{
 	display: flex;
 	flex-direction: column;
+	background-color: grey;
+	width: 350px;
+	height: 300px;
 	flex-shrink: 0;
-	border-radius: 12px;
-	position: relative;
-	/* border: 2px solid var(--text-gold); */
-	padding: 15px;
-	margin: 0 30px;
-	background-color: rgba(200, 200, 200, 0.3);
-}
-.card__port__title > h4 {
-	font-family: 200;
-}
-
-.card__port__image {
-	width: 100%;
-	height: 200px;
-	background-color: var(--text-white);
 	border-radius: 24px;
-	margin: 15px 0;
+	align-items: center;
+	cursor: pointer;
+	transition: height 0.3s ease;
+	gap: 20px;
 }
-.port__descript {
-	text-align: start;
-	color: var(--text-white);
+.portfolio__container__card:hover{
+	height: 500px;
+	box-shadow:2px 2px 15px rgba(255, 255, 255, 0.4) ;
 }
-.btn-see {
-	position: absolute;
-	display: inline-block;
-	bottom: 30px;
-	background-color: rgba(25, 25, 25, 0) !important;
-	border: 2px solid var(--text-gold);
-	color: var(--text-white);
-	margin-left: -75px;
-	width: 120px;
-	height: 30px;
-	border-radius: 14px;
-	transition: background-color 0.3s ease;
-    cursor: pointer;
+.portfolio__title{
+	
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+.portfolio__title p {
+	font-size: 1.5rem;
+	font-weight: 600;
 }
 
-.btn-see:hover {
-    background-color: #2980b9;
+
+.portfolio__image{
+	width: 90%;
+	height: 200px;
+}
+.portfolio__image>img{
+	width: 100%;
+	height: auto;
+	border-radius: 12px;
+}
+.portfolio__image::after{
+	content: '';
+    display: block;
+    position: absolute;
+    width: 315px;
+    height: 0px;
+    background-color: rgba(25, 25, 25, 0.7);
+    margin-top: -206px;
+    border-radius: 14px;
+	transition: height 0.3s ease;
+}
+
+.portfolio__text{
+	visibility: hidden;
+	transition: visible 0.3s ease;
+	transition-delay: 0.5s;
+}
+
+.portfolio__container__card:hover .portfolio__text{
+	visibility: visible;
+}
+
+.portfolio__container__card:hover 
+.portfolio__image::after{
+	height: 200px;
+	background-color: rgba(25, 25, 25, 0.7);
+	margin-top: -206px;
+	border-radius: 14px;
+}
+
+.portfolio__image__find{
+	font-size: 8rem;
+    position: fixed;
+    display: block;
+    top: 0;
+    z-index: 12;
+    margin: 250px 0 0 105px;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	transition-delay: 0.3s;
+}
+.portfolio__image__find::after{
+	content: 'See details';
+    color: var(--text-gold);
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 15;
+    bottom: 0;
+    width: 90px;
+    margin: 0 0 20px -108px
+	
+	
+}
+.portfolio__container__card:hover
+.portfolio__image__find{
+	opacity: 1;
+}
+
+
+@media screen and (max-width: 767.98px) {
+	.portfolio__container__card:hover 
+	.portfolio__image::after{
+		display: block;
+		position: relative;
+		margin-top: -195px;
+	}
+	.portfolio__image__find{
+		font-size: 7rem;
+		position: relative;
+		display: block;
+    	margin: -180px 0 0 30px;
+	}
 }
 
